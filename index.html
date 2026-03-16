@@ -33,50 +33,70 @@
 
         <section id="projects">
             <h2>Our Projects</h2>
-            <div class="project-card">
-                <div class="slideshow">
-                    <div class="slides">
-                        <img src="20220412 Darke County Airport Terminal.jpg" alt="Darke County Airport Terminal" class="slide active">
-                        <img src="20221025 Darke Co Airport v1.jpg" alt="Darke County Airport View 1" class="slide">
-                        <img src="20221028 Darke Co Airport v2.jpg" alt="Darke County Airport View 2" class="slide">
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="slideshow" data-slideshow>
+                        <div class="slides">
+                            <img src="20220412 Darke County Airport Terminal.jpg" alt="Darke County Airport Terminal" class="slide active">
+                            <img src="20221025 Darke Co Airport v1.jpg" alt="Darke County Airport View 1" class="slide">
+                            <img src="20221028 Darke Co Airport v2.jpg" alt="Darke County Airport View 2" class="slide">
+                        </div>
+                        <button class="slide-btn prev">&#10094;</button>
+                        <button class="slide-btn next">&#10095;</button>
+                        <div class="slide-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
                     </div>
-                    <button class="slide-btn prev" onclick="changeSlide(-1)">&#10094;</button>
-                    <button class="slide-btn next" onclick="changeSlide(1)">&#10095;</button>
-                    <div class="slide-dots">
-                        <span class="dot active" onclick="goToSlide(0)"></span>
-                        <span class="dot" onclick="goToSlide(1)"></span>
-                        <span class="dot" onclick="goToSlide(2)"></span>
-                    </div>
+                    <h3>Darke County Airport</h3>
+                    <p>Versailles, OH</p>
                 </div>
-                <h3>Darke County Airport</h3>
-                <p>Versailles, OH</p>
+
+                <div class="project-card">
+                    <div class="slideshow" data-slideshow>
+                        <div class="slides">
+                            <img src="IMG_4949.jpg" alt="YSU Project Photo 1" class="slide active">
+                            <img src="IMG_4952.jpg" alt="YSU Project Photo 2" class="slide">
+                            <img src="IMG_4954.jpg" alt="YSU Project Photo 3" class="slide">
+                            <img src="IMG_4955.jpg" alt="YSU Project Photo 4" class="slide">
+                        </div>
+                        <button class="slide-btn prev">&#10094;</button>
+                        <button class="slide-btn next">&#10095;</button>
+                        <div class="slide-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                    <h3>Youngstown State University</h3>
+                    <p>Youngstown, OH</p>
+                </div>
             </div>
         </section>
     </main>
 
     <script>
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.slide');
-        const dots = document.querySelectorAll('.dot');
+        document.querySelectorAll('[data-slideshow]').forEach(function(slideshow) {
+            const slides = slideshow.querySelectorAll('.slide');
+            const dots = slideshow.querySelectorAll('.dot');
+            let current = 0;
 
-        function showSlide(index) {
-            slides.forEach(s => s.classList.remove('active'));
-            dots.forEach(d => d.classList.remove('active'));
-            currentSlide = (index + slides.length) % slides.length;
-            slides[currentSlide].classList.add('active');
-            dots[currentSlide].classList.add('active');
-        }
+            function show(index) {
+                slides.forEach(s => s.classList.remove('active'));
+                dots.forEach(d => d.classList.remove('active'));
+                current = (index + slides.length) % slides.length;
+                slides[current].classList.add('active');
+                dots[current].classList.add('active');
+            }
 
-        function changeSlide(direction) {
-            showSlide(currentSlide + direction);
-        }
+            slideshow.querySelector('.prev').addEventListener('click', () => show(current - 1));
+            slideshow.querySelector('.next').addEventListener('click', () => show(current + 1));
+            dots.forEach((dot, i) => dot.addEventListener('click', () => show(i)));
 
-        function goToSlide(index) {
-            showSlide(index);
-        }
-
-        // Auto-advance every 4 seconds
-        setInterval(() => changeSlide(1), 4000);
+            setInterval(() => show(current + 1), 4000);
+        });
     </script>
 
     <footer>
