@@ -179,6 +179,7 @@ nav.scrolled{background:rgba(244,239,230,0.97);backdrop-filter:blur(12px);border
 .proj-slides{position:relative;width:100%;height:300px;}
 .proj-slide{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 0.6s ease;}
 .proj-slide.active{opacity:1;}
+.proj-slide.bw{filter:grayscale(100%) contrast(1.1);}
 .proj-slide-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.5);color:#fff;border:none;padding:0.6rem 0.8rem;font-size:1rem;cursor:pointer;border-radius:4px;transition:background 0.2s;z-index:1;}
 .proj-slide-btn:hover{background:rgba(91,58,138,0.8);}
 .proj-slide-btn.prev{left:8px;}
@@ -769,14 +770,16 @@ footer p{font-family:'DM Mono',monospace;font-size:0.56rem;letter-spacing:0.1em;
     <div class="proj-gallery-card reveal">
       <div class="proj-slideshow" data-proj-slideshow>
         <div class="proj-slides">
-          <img src="https://images.squarespace-cdn.com/content/5fd55b0b3c1f6275809eb55e/5638cb7c-6371-4a88-a379-61e5ea7d5e0f/Darke+County+Airport+%281%29.jpg?content-type=image%2Fjpeg" alt="Darke County Airport" class="proj-slide active">
+          <img src="https://images.squarespace-cdn.com/content/5fd55b0b3c1f6275809eb55e/5638cb7c-6371-4a88-a379-61e5ea7d5e0f/Darke+County+Airport+%281%29.jpg?content-type=image%2Fjpeg" alt="Darke County Airport" class="proj-slide bw active">
           <img src="https://images.squarespace-cdn.com/content/5fd55b0b3c1f6275809eb55e/da0f1673-3ae2-4bd6-ba9f-846e2aaad947/Darke+County+Airport+%282%29.jpg?content-type=image%2Fjpeg" alt="Darke County Airport" class="proj-slide">
           <img src="https://images.squarespace-cdn.com/content/5fd55b0b3c1f6275809eb55e/b107a6d1-2cd1-4991-a457-c545f0275d01/Darke+County+Airport+%283%29.jpg?content-type=image%2Fjpeg" alt="Darke County Airport" class="proj-slide">
+          <img src="https://images.squarespace-cdn.com/content/5fd55b0b3c1f6275809eb55e/5638cb7c-6371-4a88-a379-61e5ea7d5e0f/Darke+County+Airport+%281%29.jpg?content-type=image%2Fjpeg" alt="Darke County Airport" class="proj-slide">
         </div>
         <button class="proj-slide-btn prev">&#10094;</button>
         <button class="proj-slide-btn next">&#10095;</button>
         <div class="proj-slide-dots">
           <span class="proj-dot active"></span>
+          <span class="proj-dot"></span>
           <span class="proj-dot"></span>
           <span class="proj-dot"></span>
         </div>
@@ -791,10 +794,11 @@ footer p{font-family:'DM Mono',monospace;font-size:0.56rem;letter-spacing:0.1em;
     <div class="proj-gallery-card reveal" style="transition-delay:.08s">
       <div class="proj-slideshow" data-proj-slideshow>
         <div class="proj-slides">
-          <img src="https://images.squarespace-cdn.com/content/5fd55b0b3c1f6275809eb55e/a34c5e33-d5d1-482b-a15e-fdca1d7457c3/YSU+%281%29.jpg?content-type=image%2Fjpeg" alt="YSU Locker Room" class="proj-slide active">
+          <img src="https://images.squarespace-cdn.com/content/5fd55b0b3c1f6275809eb55e/a34c5e33-d5d1-482b-a15e-fdca1d7457c3/YSU+%281%29.jpg?content-type=image%2Fjpeg" alt="YSU Locker Room" class="proj-slide bw active">
           <img src="https://images.squarespace-cdn.com/content/5fd55b0b3c1f6275809eb55e/78d5139c-8806-4d32-a8c6-a9a7829e25c9/YSU+%282%29.jpg?content-type=image%2Fjpeg" alt="YSU Interior" class="proj-slide">
           <img src="https://images.squarespace-cdn.com/content/5fd55b0b3c1f6275809eb55e/34ddd47c-1d3b-4e6e-877c-941ef562c106/YSU+%283%29.jpg?content-type=image%2Fjpeg" alt="YSU Interior" class="proj-slide">
           <img src="https://images.squarespace-cdn.com/content/5fd55b0b3c1f6275809eb55e/615c0370-bfd9-433b-b155-6c553fe195e5/YSU+%284%29.jpg?content-type=image%2Fjpeg" alt="YSU Interior" class="proj-slide">
+          <img src="https://images.squarespace-cdn.com/content/5fd55b0b3c1f6275809eb55e/a34c5e33-d5d1-482b-a15e-fdca1d7457c3/YSU+%281%29.jpg?content-type=image%2Fjpeg" alt="YSU Locker Room" class="proj-slide">
         </div>
         <button class="proj-slide-btn prev">&#10094;</button>
         <button class="proj-slide-btn next">&#10095;</button>
@@ -803,10 +807,11 @@ footer p{font-family:'DM Mono',monospace;font-size:0.56rem;letter-spacing:0.1em;
           <span class="proj-dot"></span>
           <span class="proj-dot"></span>
           <span class="proj-dot"></span>
+          <span class="proj-dot"></span>
         </div>
       </div>
       <div class="proj-gallery-card-body">
-        <h3>YSU Basketball Team Locker Room/Lounge</h3>
+        <h3>YSU Basketball Locker Room + Lounge</h3>
         <p>Youngstown, OH · Commercial</p>
       </div>
     </div>
@@ -815,15 +820,17 @@ footer p{font-family:'DM Mono',monospace;font-size:0.56rem;letter-spacing:0.1em;
     <div class="proj-gallery-card reveal" style="transition-delay:.16s">
       <div class="proj-slideshow" data-proj-slideshow>
         <div class="proj-slides">
-          <img src="https://images.squarespace-cdn.com/content/5fd55b0b3c1f6275809eb55e/79278280-2e7c-467c-8d74-f084900978b7/J+Arnold+Investments+%281%29.webp?content-type=image%2Fwebp" alt="J Arnold Gym" class="proj-slide active">
+          <img src="https://images.squarespace-cdn.com/content/5fd55b0b3c1f6275809eb55e/79278280-2e7c-467c-8d74-f084900978b7/J+Arnold+Investments+%281%29.webp?content-type=image%2Fwebp" alt="J Arnold Gym" class="proj-slide bw active">
           <img src="https://images.squarespace-cdn.com/content/5fd55b0b3c1f6275809eb55e/1873b8f0-3045-495f-b82b-b8a49b441a3f/J+Arnold+Investments+%282%29.webp?content-type=image%2Fwebp" alt="J Arnold Corridor" class="proj-slide">
           <img src="https://images.squarespace-cdn.com/content/5fd55b0b3c1f6275809eb55e/45cf0f18-3d03-4430-8a7f-c92c4b98a71d/J+Arnold+Investments+%283%29.webp?content-type=image%2Fwebp" alt="J Arnold Corridor" class="proj-slide">
           <img src="https://images.squarespace-cdn.com/content/5fd55b0b3c1f6275809eb55e/e8a1e2b7-bb4d-42a6-9dbc-5115f93e4be8/J+Arnold+Investments+%284%29.webp?content-type=image%2Fwebp" alt="J Arnold Kitchen" class="proj-slide">
+          <img src="https://images.squarespace-cdn.com/content/5fd55b0b3c1f6275809eb55e/79278280-2e7c-467c-8d74-f084900978b7/J+Arnold+Investments+%281%29.webp?content-type=image%2Fwebp" alt="J Arnold Gym" class="proj-slide">
         </div>
         <button class="proj-slide-btn prev">&#10094;</button>
         <button class="proj-slide-btn next">&#10095;</button>
         <div class="proj-slide-dots">
           <span class="proj-dot active"></span>
+          <span class="proj-dot"></span>
           <span class="proj-dot"></span>
           <span class="proj-dot"></span>
           <span class="proj-dot"></span>
@@ -839,14 +846,16 @@ footer p{font-family:'DM Mono',monospace;font-size:0.56rem;letter-spacing:0.1em;
     <div class="proj-gallery-card reveal" style="transition-delay:.24s">
       <div class="proj-slideshow" data-proj-slideshow>
         <div class="proj-slides">
-          <img src="https://images.squarespace-cdn.com/content/5fd55b0b3c1f6275809eb55e/6c93bb3b-f050-42ae-8c38-3a7cec940b76/Huntington+Bank+%281%29.JPG?content-type=image%2Fjpeg" alt="Huntington Bank Interior" class="proj-slide active">
+          <img src="https://images.squarespace-cdn.com/content/5fd55b0b3c1f6275809eb55e/6c93bb3b-f050-42ae-8c38-3a7cec940b76/Huntington+Bank+%281%29.JPG?content-type=image%2Fjpeg" alt="Huntington Bank Interior" class="proj-slide bw active">
           <img src="https://images.squarespace-cdn.com/content/5fd55b0b3c1f6275809eb55e/c38b6a8b-1b38-4b96-bc2a-dda084cc3dbb/Huntington+Bank+%282%29.jpeg?content-type=image%2Fjpeg" alt="Huntington Bank Exterior" class="proj-slide">
           <img src="https://images.squarespace-cdn.com/content/5fd55b0b3c1f6275809eb55e/0464b717-de46-4602-a37d-50b329f7d10b/Huntington+Bank+%283%29.jpg?content-type=image%2Fjpeg" alt="Huntington Bank Floor Plan" class="proj-slide">
+          <img src="https://images.squarespace-cdn.com/content/5fd55b0b3c1f6275809eb55e/6c93bb3b-f050-42ae-8c38-3a7cec940b76/Huntington+Bank+%281%29.JPG?content-type=image%2Fjpeg" alt="Huntington Bank Interior" class="proj-slide">
         </div>
         <button class="proj-slide-btn prev">&#10094;</button>
         <button class="proj-slide-btn next">&#10095;</button>
         <div class="proj-slide-dots">
           <span class="proj-dot active"></span>
+          <span class="proj-dot"></span>
           <span class="proj-dot"></span>
           <span class="proj-dot"></span>
         </div>
@@ -861,14 +870,16 @@ footer p{font-family:'DM Mono',monospace;font-size:0.56rem;letter-spacing:0.1em;
     <div class="proj-gallery-card reveal" style="transition-delay:.08s">
       <div class="proj-slideshow" data-proj-slideshow>
         <div class="proj-slides">
-          <img src="https://images.squarespace-cdn.com/content/5fd55b0b3c1f6275809eb55e/b3e6e501-fb5e-4c67-90b0-23c3c522f860/Canfield+Fair+%281%29.JPG?content-type=image%2Fjpeg" alt="Canfield Fair Exterior" class="proj-slide active">
+          <img src="https://images.squarespace-cdn.com/content/5fd55b0b3c1f6275809eb55e/b3e6e501-fb5e-4c67-90b0-23c3c522f860/Canfield+Fair+%281%29.JPG?content-type=image%2Fjpeg" alt="Canfield Fair Exterior" class="proj-slide bw active">
           <img src="https://images.squarespace-cdn.com/content/5fd55b0b3c1f6275809eb55e/19c12b39-2acf-46d1-9594-0f2be5be452d/Canfield+Fair+%282%29.JPG?content-type=image%2Fjpeg" alt="Canfield Fair Interior" class="proj-slide">
           <img src="https://images.squarespace-cdn.com/content/5fd55b0b3c1f6275809eb55e/fa5b7235-02e1-4a05-90f2-3efc275941e5/Canfield+Fair+%283%29.JPEG?content-type=image%2Fjpeg" alt="Canfield Fair Interior" class="proj-slide">
+          <img src="https://images.squarespace-cdn.com/content/5fd55b0b3c1f6275809eb55e/b3e6e501-fb5e-4c67-90b0-23c3c522f860/Canfield+Fair+%281%29.JPG?content-type=image%2Fjpeg" alt="Canfield Fair Exterior" class="proj-slide">
         </div>
         <button class="proj-slide-btn prev">&#10094;</button>
         <button class="proj-slide-btn next">&#10095;</button>
         <div class="proj-slide-dots">
           <span class="proj-dot active"></span>
+          <span class="proj-dot"></span>
           <span class="proj-dot"></span>
           <span class="proj-dot"></span>
         </div>
@@ -883,15 +894,17 @@ footer p{font-family:'DM Mono',monospace;font-size:0.56rem;letter-spacing:0.1em;
     <div class="proj-gallery-card reveal" style="transition-delay:.16s">
       <div class="proj-slideshow" data-proj-slideshow>
         <div class="proj-slides">
-          <img src="https://images.squarespace-cdn.com/content/5fd55b0b3c1f6275809eb55e/8164d51c-8f32-48d4-b01c-9f43cd1c7954/Buttermaid+%281%29.JPG?content-type=image%2Fjpeg" alt="Buttermaid" class="proj-slide active">
-          <img src="https://images.squarespace-cdn.com/content/5fd55b0b3c1f6275809eb55e/20246ca2-509b-481a-8ea7-66ff3176aebf/Buttermaid+%282%29.JPG?content-type=image%2Fjpeg" alt="Buttermaid" class="proj-slide">
-          <img src="https://images.squarespace-cdn.com/content/5fd55b0b3c1f6275809eb55e/a73480a4-0286-4e54-8152-6e9e1c8aa64c/Buttermaid+%283%29.JPG?content-type=image%2Fjpeg" alt="Buttermaid" class="proj-slide">
-          <img src="https://images.squarespace-cdn.com/content/5fd55b0b3c1f6275809eb55e/9b3eb408-d956-4399-9b7d-aaf8a923e153/Buttermaid+%284%29.JPG?content-type=image%2Fjpeg" alt="Buttermaid" class="proj-slide">
+          <img src="https://images.squarespace-cdn.com/content/5fd55b0b3c1f6275809eb55e/8164d51c-8f32-48d4-b01c-9f43cd1c7954/Buttermaid+%281%29.JPG?content-type=image%2Fjpeg" alt="Butter Maid Bakery" class="proj-slide bw active">
+          <img src="https://images.squarespace-cdn.com/content/5fd55b0b3c1f6275809eb55e/20246ca2-509b-481a-8ea7-66ff3176aebf/Buttermaid+%282%29.JPG?content-type=image%2Fjpeg" alt="Butter Maid Bakery" class="proj-slide">
+          <img src="https://images.squarespace-cdn.com/content/5fd55b0b3c1f6275809eb55e/a73480a4-0286-4e54-8152-6e9e1c8aa64c/Buttermaid+%283%29.JPG?content-type=image%2Fjpeg" alt="Butter Maid Bakery" class="proj-slide">
+          <img src="https://images.squarespace-cdn.com/content/5fd55b0b3c1f6275809eb55e/9b3eb408-d956-4399-9b7d-aaf8a923e153/Buttermaid+%284%29.JPG?content-type=image%2Fjpeg" alt="Butter Maid Bakery" class="proj-slide">
+          <img src="https://images.squarespace-cdn.com/content/5fd55b0b3c1f6275809eb55e/8164d51c-8f32-48d4-b01c-9f43cd1c7954/Buttermaid+%281%29.JPG?content-type=image%2Fjpeg" alt="Butter Maid Bakery" class="proj-slide">
         </div>
         <button class="proj-slide-btn prev">&#10094;</button>
         <button class="proj-slide-btn next">&#10095;</button>
         <div class="proj-slide-dots">
           <span class="proj-dot active"></span>
+          <span class="proj-dot"></span>
           <span class="proj-dot"></span>
           <span class="proj-dot"></span>
           <span class="proj-dot"></span>
@@ -907,15 +920,17 @@ footer p{font-family:'DM Mono',monospace;font-size:0.56rem;letter-spacing:0.1em;
     <div class="proj-gallery-card reveal" style="transition-delay:.24s">
       <div class="proj-slideshow" data-proj-slideshow>
         <div class="proj-slides">
-          <img src="https://images.squarespace-cdn.com/content/5fd55b0b3c1f6275809eb55e/0f5d3272-ec5d-4bd8-88fc-5331acefaa49/Double+Bogey+%282%29.jpg?content-type=image%2Fjpeg" alt="Double Bogeys" class="proj-slide active">
+          <img src="https://images.squarespace-cdn.com/content/5fd55b0b3c1f6275809eb55e/0f5d3272-ec5d-4bd8-88fc-5331acefaa49/Double+Bogey+%282%29.jpg?content-type=image%2Fjpeg" alt="Double Bogeys" class="proj-slide bw active">
           <img src="https://images.squarespace-cdn.com/content/5fd55b0b3c1f6275809eb55e/91b78967-9134-4488-9c79-6374ce60311a/Double+Bogey+%281%29.jpg?content-type=image%2Fjpeg" alt="Double Bogeys" class="proj-slide">
           <img src="https://images.squarespace-cdn.com/content/5fd55b0b3c1f6275809eb55e/5379f262-c659-4f1b-b870-48c47a5c1427/Double+Bogey+%283%29.JPG?content-type=image%2Fjpeg" alt="Double Bogeys" class="proj-slide">
           <img src="https://images.squarespace-cdn.com/content/5fd55b0b3c1f6275809eb55e/c4ba08b9-0735-4dfb-a929-59efb574cd16/Double+Bogey+%284%29.JPG?content-type=image%2Fjpeg" alt="Double Bogeys" class="proj-slide">
+          <img src="https://images.squarespace-cdn.com/content/5fd55b0b3c1f6275809eb55e/0f5d3272-ec5d-4bd8-88fc-5331acefaa49/Double+Bogey+%282%29.jpg?content-type=image%2Fjpeg" alt="Double Bogeys" class="proj-slide">
         </div>
         <button class="proj-slide-btn prev">&#10094;</button>
         <button class="proj-slide-btn next">&#10095;</button>
         <div class="proj-slide-dots">
           <span class="proj-dot active"></span>
+          <span class="proj-dot"></span>
           <span class="proj-dot"></span>
           <span class="proj-dot"></span>
           <span class="proj-dot"></span>
