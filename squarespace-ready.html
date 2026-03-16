@@ -1,0 +1,264 @@
+<!-- ============================================================
+     ANNISSA WEBSITE - COMPLETE CODE FOR SQUARESPACE
+
+     HOW TO USE:
+     1. Upload all your photos to Squarespace (Assets/Files section)
+     2. For each uploaded photo, right-click it and copy the image URL
+     3. Replace each YOUR_SQUARESPACE_URL_FOR_XXXXX below with
+        the actual URL from Squarespace
+     4. Paste this entire code into your Squarespace Custom Code section
+     ============================================================ -->
+
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    .annissa-site { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #333; line-height: 1.6; }
+    .annissa-header { background: #2c3e50; color: white; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+    .annissa-header h1 { font-size: 1.8rem; }
+    .annissa-nav a { color: white; text-decoration: none; margin-left: 1.5rem; font-size: 1rem; }
+    .annissa-nav a:hover { text-decoration: underline; }
+    .annissa-main { max-width: 1100px; margin: 0 auto; padding: 2rem; }
+    .annissa-section { text-align: center; padding: 2rem 0; }
+    .annissa-section h2 { font-size: 2rem; margin-bottom: 2rem; color: #2c3e50; }
+    .team-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; }
+    .team-member { background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); overflow: hidden; width: 280px; transition: transform 0.3s; }
+    .team-member:hover { transform: translateY(-5px); }
+    .team-member img { width: 100%; height: 320px; object-fit: cover; }
+    .team-member h3 { padding: 1rem; font-size: 1.3rem; color: #2c3e50; }
+    .projects-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; }
+    .project-card { background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); overflow: hidden; width: 460px; }
+    .project-card h3 { padding: 1rem 1rem 0.25rem; font-size: 1.3rem; color: #2c3e50; }
+    .project-card p { padding: 0 1rem 1rem; color: #666; }
+    .slideshow { position: relative; width: 100%; overflow: hidden; }
+    .slides { position: relative; width: 100%; height: 420px; }
+    .slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.6s ease; }
+    .slide.active { opacity: 1; }
+    .slide-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.4); color: white; border: none; padding: 0.8rem 1rem; font-size: 1.2rem; cursor: pointer; border-radius: 4px; transition: background 0.2s; z-index: 1; }
+    .slide-btn:hover { background: rgba(0,0,0,0.7); }
+    .slide-btn.prev { left: 10px; }
+    .slide-btn.next { right: 10px; }
+    .slide-dots { position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; z-index: 1; }
+    .dot { width: 12px; height: 12px; border-radius: 50%; background: rgba(255,255,255,0.5); cursor: pointer; transition: background 0.2s; }
+    .dot.active { background: white; }
+    .annissa-footer { background: #2c3e50; color: white; text-align: center; padding: 1rem; margin-top: 3rem; }
+</style>
+
+<div class="annissa-site">
+    <header class="annissa-header">
+        <h1>Annissa</h1>
+        <nav class="annissa-nav">
+            <a href="#about">About</a>
+            <a href="#team">Team</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="annissa-main">
+
+        <!-- ==================== TEAM SECTION ==================== -->
+        <section class="annissa-section" id="team">
+            <h2>Meet Our Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <!-- REPLACE the URL below with your Squarespace URL for Emily.png -->
+                    <img src="YOUR_SQUARESPACE_URL_FOR_Emily.png" alt="Emily">
+                    <h3>Emily</h3>
+                </div>
+                <div class="team-member">
+                    <!-- REPLACE the URL below with your Squarespace URL for Alissa.png -->
+                    <img src="YOUR_SQUARESPACE_URL_FOR_Alissa.png" alt="Alissa">
+                    <h3>Alissa</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== PROJECTS SECTION ==================== -->
+        <section class="annissa-section" id="projects">
+            <h2>Our Projects</h2>
+            <div class="projects-grid">
+
+                <!-- ===== DARKE COUNTY AIRPORT ===== -->
+                <div class="project-card">
+                    <div class="slideshow" data-slideshow>
+                        <div class="slides">
+                            <!-- REPLACE each URL below with your Squarespace URLs -->
+                            <img src="YOUR_SQUARESPACE_URL_FOR_DarkeCountyAirportTerminal.jpg" alt="Darke County Airport Terminal" class="slide active">
+                            <img src="YOUR_SQUARESPACE_URL_FOR_DarkeCoAirport_v1.jpg" alt="Darke County Airport View 1" class="slide">
+                            <img src="YOUR_SQUARESPACE_URL_FOR_DarkeCoAirport_v2.jpg" alt="Darke County Airport View 2" class="slide">
+                        </div>
+                        <button class="slide-btn prev">&#10094;</button>
+                        <button class="slide-btn next">&#10095;</button>
+                        <div class="slide-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                    <h3>Darke County Airport</h3>
+                    <p>Versailles, OH</p>
+                </div>
+
+                <!-- ===== YSU BASKETBALL TEAM LOCKER ROOM/LOUNGE ===== -->
+                <div class="project-card">
+                    <div class="slideshow" data-slideshow>
+                        <div class="slides">
+                            <!-- REPLACE each URL below with your Squarespace URLs -->
+                            <img src="YOUR_SQUARESPACE_URL_FOR_IMG_4952.jpg" alt="YSU Locker Room" class="slide active">
+                            <img src="YOUR_SQUARESPACE_URL_FOR_IMG_4949.jpg" alt="YSU Lounge" class="slide">
+                            <img src="YOUR_SQUARESPACE_URL_FOR_IMG_4955.jpg" alt="YSU Interior" class="slide">
+                            <img src="YOUR_SQUARESPACE_URL_FOR_IMG_4954.jpg" alt="YSU Interior" class="slide">
+                        </div>
+                        <button class="slide-btn prev">&#10094;</button>
+                        <button class="slide-btn next">&#10095;</button>
+                        <div class="slide-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                    <h3>YSU Basketball Team Locker Room/Lounge</h3>
+                    <p>Youngstown, OH</p>
+                </div>
+
+                <!-- ===== J ARNOLD INVESTMENTS ===== -->
+                <div class="project-card">
+                    <div class="slideshow" data-slideshow>
+                        <div class="slides">
+                            <!-- REPLACE each URL below with your Squarespace URLs -->
+                            <img src="YOUR_SQUARESPACE_URL_FOR_Gym.webp" alt="J Arnold Gym" class="slide active">
+                            <img src="YOUR_SQUARESPACE_URL_FOR_Corridor02.webp" alt="J Arnold Corridor" class="slide">
+                            <img src="YOUR_SQUARESPACE_URL_FOR_Corridor.webp" alt="J Arnold Corridor" class="slide">
+                            <img src="YOUR_SQUARESPACE_URL_FOR_Kitchen.webp" alt="J Arnold Kitchen" class="slide">
+                        </div>
+                        <button class="slide-btn prev">&#10094;</button>
+                        <button class="slide-btn next">&#10095;</button>
+                        <div class="slide-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                    <h3>J Arnold Investments</h3>
+                    <p></p>
+                </div>
+
+                <!-- ===== HUNTINGTON BANK ===== -->
+                <div class="project-card">
+                    <div class="slideshow" data-slideshow>
+                        <div class="slides">
+                            <!-- REPLACE each URL below with your Squarespace URLs -->
+                            <img src="YOUR_SQUARESPACE_URL_FOR_IMG_0643.JPG" alt="Huntington Bank Interior" class="slide active">
+                            <img src="YOUR_SQUARESPACE_URL_FOR_Huntington.jpeg" alt="Huntington Bank Exterior" class="slide">
+                            <img src="YOUR_SQUARESPACE_URL_FOR_OriginalPlan.jpg" alt="Huntington Bank Floor Plan" class="slide">
+                        </div>
+                        <button class="slide-btn prev">&#10094;</button>
+                        <button class="slide-btn next">&#10095;</button>
+                        <div class="slide-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                    <h3>Huntington Bank</h3>
+                    <p>Downtown Youngstown, OH</p>
+                </div>
+
+                <!-- ===== CANFIELD FAIR ===== -->
+                <div class="project-card">
+                    <div class="slideshow" data-slideshow>
+                        <div class="slides">
+                            <!-- REPLACE each URL below with your Squarespace URLs -->
+                            <img src="YOUR_SQUARESPACE_URL_FOR_IMG_1533.JPG" alt="Canfield Fair Exterior" class="slide active">
+                            <img src="YOUR_SQUARESPACE_URL_FOR_IMG_5832.JPG" alt="Canfield Fair Interior" class="slide">
+                            <img src="YOUR_SQUARESPACE_URL_FOR_IMG_9116.JPEG" alt="Canfield Fair Interior" class="slide">
+                        </div>
+                        <button class="slide-btn prev">&#10094;</button>
+                        <button class="slide-btn next">&#10095;</button>
+                        <div class="slide-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                    <h3>Canfield Fair</h3>
+                    <p>Canfield, OH</p>
+                </div>
+
+                <!-- ===== BUTTERMAID ===== -->
+                <div class="project-card">
+                    <div class="slideshow" data-slideshow>
+                        <div class="slides">
+                            <!-- REPLACE each URL below with your Squarespace URLs -->
+                            <img src="YOUR_SQUARESPACE_URL_FOR_IMG_3214.JPG" alt="Buttermaid Display" class="slide active">
+                            <img src="YOUR_SQUARESPACE_URL_FOR_IMG_3211.JPG" alt="Buttermaid Kitchen" class="slide">
+                            <img src="YOUR_SQUARESPACE_URL_FOR_IMG_3208.JPG" alt="Buttermaid Warehouse" class="slide">
+                            <img src="YOUR_SQUARESPACE_URL_FOR_IMG_3206.JPG" alt="Buttermaid Workspace" class="slide">
+                        </div>
+                        <button class="slide-btn prev">&#10094;</button>
+                        <button class="slide-btn next">&#10095;</button>
+                        <div class="slide-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                    <h3>Buttermaid</h3>
+                    <p></p>
+                </div>
+
+                <!-- ===== DOUBLE BOGEYS ===== -->
+                <div class="project-card">
+                    <div class="slideshow" data-slideshow>
+                        <div class="slides">
+                            <!-- REPLACE each URL below with your Squarespace URLs -->
+                            <img src="YOUR_SQUARESPACE_URL_FOR_IMG_4239.jpg" alt="Double Bogeys" class="slide active">
+                            <img src="YOUR_SQUARESPACE_URL_FOR_IMG_4252.JPG" alt="Double Bogeys" class="slide">
+                            <img src="YOUR_SQUARESPACE_URL_FOR_IMG_4249.JPG" alt="Double Bogeys" class="slide">
+                            <img src="YOUR_SQUARESPACE_URL_FOR_IMG_4245.jpg" alt="Double Bogeys" class="slide">
+                        </div>
+                        <button class="slide-btn prev">&#10094;</button>
+                        <button class="slide-btn next">&#10095;</button>
+                        <div class="slide-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                    <h3>Double Bogeys</h3>
+                    <p></p>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <footer class="annissa-footer">
+        <p>&copy; 2026 Annissa. All rights reserved.</p>
+    </footer>
+</div>
+
+<script>
+    document.querySelectorAll('[data-slideshow]').forEach(function(slideshow) {
+        var slides = slideshow.querySelectorAll('.slide');
+        var dots = slideshow.querySelectorAll('.dot');
+        var current = 0;
+
+        function show(index) {
+            slides.forEach(function(s) { s.classList.remove('active'); });
+            dots.forEach(function(d) { d.classList.remove('active'); });
+            current = (index + slides.length) % slides.length;
+            slides[current].classList.add('active');
+            dots[current].classList.add('active');
+        }
+
+        slideshow.querySelector('.prev').addEventListener('click', function() { show(current - 1); });
+        slideshow.querySelector('.next').addEventListener('click', function() { show(current + 1); });
+        dots.forEach(function(dot, i) { dot.addEventListener('click', function() { show(i); }); });
+
+        setInterval(function() { show(current + 1); }, 4000);
+    });
+</script>
